@@ -1,0 +1,27 @@
+var x=0;
+var y=0;
+var spacing=10;
+
+
+while (x<=400)
+{
+    var i= Math.floor((Math.random()*2)+1);
+    var p= Math.floor((Math.random()*100)+50);
+    var q= Math.floor((Math.random()*200)+50);
+    fill(i, p, q);
+    if (i<=1)
+    {
+        rect (x, y+spacing, x+spacing, y+spacing);
+    }
+    else if (i>1)
+    {
+        line (x, y- spacing, x+ spacing, y);
+    }
+    x+=spacing;
+    if (x>=400)
+    {
+        y+=spacing;
+        x=0;
+    }
+}
+
